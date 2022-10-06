@@ -22,7 +22,7 @@
         <input type ="text" id="form1_nick" name="form1_nick" autofocus> <br>
 <br>
 
-        <input type="button" onclick="checkGuess()" value="Check the guess">
+        <input type="button" onclick="checkGuess();endGame()" value="Check the guess">
     </form>
     
     
@@ -71,7 +71,19 @@
                 
             }
         }
+        function endGame(){
 
+while (wrong > 3) {
+    if(wrong>=3){
+        wrong-=5
+        alert("Sorry, game over.")
+    }
+    else{
+        document.getElementById("result").innerHTML = "correct : " + correct + " , " + " wrong : " + wrong
+    }    
+}
+
+}
 
 </script>
 
